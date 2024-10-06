@@ -1,0 +1,63 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000a3d;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.payment-proof-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.payment-proof {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.payment-image {
+    width: 100px; /* Set width to 100px */
+    height: 100px; /* Set height to 100px */
+    margin-left: 20px; /* Space between text and image */
+    border-radius: 8px; /* Optional: round the corners */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.payment-info {
+    flex-grow: 1;
+}
+
+h4, p {
+    margin: 5px 0;
+}
+
+/* Styles for the View Proof button */
+.view-proof-button {
+    background-color: #00f0ff; /* Neon cyan */
+    color: #1e1e2f; /* Dark background for text contrast */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-proof-button:hover {
+    background-color: #00d4e0; /* Darker shade on hover */
+}

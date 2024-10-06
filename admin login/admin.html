@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2>Earn Cash Admin</h2>
+            <nav>
+                <ul>
+                    <li><a href="#overview"><i class="fas fa-tachometer-alt"></i> Overview</a></li>
+                    <li><a href="#user-data"><i class="fas fa-users"></i> User Data</a></li>
+                    <li><a href="#payment-list"><i class="fas fa-money-check-alt"></i> withdraw_list</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <!-- Overview Section -->
+            <section id="overview" class="card">
+             <h1>Overview</h1>
+              <div class="overview-stats">
+                  <div class="stat-card">
+                   <h2>Total Users</h2>
+                    <p id="total-users-overview">0</p>
+               </div>
+               <div class="stat-card">
+                 <h2>Total Withdrawal</h2>
+                 <p id="total-payments-overview">0</p> <!-- This will display total withdrawals count -->
+               </div>
+                 <div class="stat-card">
+                   <h2>Total Payments</h2>
+                      <p id="total-payment">0</p> <!-- This will display total payment amount -->
+                       </div>
+                           </div>
+                             </section>
+             
+
+            <!-- User Data Section -->
+            <section id="user-data" class="card">
+                <h1>User Data</h1>
+                <div class="search-container">
+                    <input type="text" id="search-number" placeholder="Enter number to search">
+                    <button id="search-button">Search</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Number</th>
+                                <th>Password</th>
+                                <th>Plan</th>
+                                <th>Rupee</th>
+                                <th>Token</th>
+                                <th>Work</th>
+                            </tr>
+                        </thead>
+                        <tbody id="user-data-body">
+                            <!-- User data rows will be inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="withdrawal-list" class="card">
+                <h1>Withdrawal List</h1>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Amount</th>
+                                <th>Date & Time</th>
+                                <th>Phone Number</th>
+                                <th>UPI</th>
+                            </tr>
+                        </thead>
+                        <tbody id="withdrawal-data-body">
+                            <!-- Withdrawal data rows will be inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+                
+            </section>
+            
+        </main>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"></script>
+    <script type="module" src="admin.js"></script>
+</body>
+</html>
